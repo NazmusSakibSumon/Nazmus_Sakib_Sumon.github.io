@@ -1,5 +1,3 @@
-/* Merged: Original full styling + light Neovim-inspired colors */
-
 body {
   background-color: #f2f0e5;
   color: #3c3d37;
@@ -123,14 +121,15 @@ ul.contact li:before {
     padding: 1.5em;
   }
 }
+
 .profile-img {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #ccc;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ccc;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .banner-flex {
@@ -201,4 +200,36 @@ ul.contact li:before {
 
 .tech-card:hover .underline {
   width: 100%;
+}
+
+/* 🔄 Added for video-on-hover behavior */
+.video-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.video-wrapper img,
+.video-wrapper video {
+  width: 100%;
+  height: auto;
+  transition: opacity 0.3s ease;
+  display: block;
+  border-radius: 10px;
+}
+
+.video-wrapper video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.tech-card:hover video {
+  opacity: 1;
+}
+
+.tech-card:hover img {
+  opacity: 0;
 }
