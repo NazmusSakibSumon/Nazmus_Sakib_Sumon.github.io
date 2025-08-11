@@ -123,3 +123,82 @@ ul.contact li:before {
     padding: 1.5em;
   }
 }
+.profile-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ccc;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.banner-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.banner-text h2 {
+  font-size: 1.75em;
+  margin: 0 0 0.5rem 0;
+}
+
+.banner-text p {
+  font-size: 1em;
+  margin: 0;
+}
+
+.tech-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.tech-card {
+  text-align: center;
+  width: 180px;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.tech-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+.tech-card h3 {
+  margin: 0.25rem 0 0.5rem;
+  font-size: 1em;
+}
+
+.tech-card p {
+  font-size: 0.9em;
+  color: #666;
+}
+
+.tech-card .underline {
+  display: block;
+  width: 0%;
+  height: 2px;
+  background-color: #a9b665;
+  margin: 0.5rem auto 0;
+  transition: width 0.3s ease;
+}
+
+.tech-card:hover {
+  transform: translateY(-5px);
+}
+
+.tech-card:hover .underline {
+  width: 100%;
+}
