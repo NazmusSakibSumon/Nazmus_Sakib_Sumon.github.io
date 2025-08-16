@@ -583,3 +583,37 @@ ul.contact li:before {
 @media screen and (max-width: 760px) {
   .day-timeline { grid-template-columns: 1fr; }
 }
+
+
+/* Tabs / segmented control for Videos */
+.videos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.segmented {
+  display: inline-flex;
+  background: #eae6d8;
+  border-radius: 999px;
+  padding: 4px;
+}
+.seg-btn {
+  border: 0;
+  background: transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.seg-btn:focus-visible { outline: 2px solid #3f4e85; }
+.seg-btn.active { background: #a9b665; color: #fff; }
+
+/* Panels */
+.video-panel { display: none; }
+.video-panel.active { display: block; }
+.video-panel[hidden] { display: none !important; }
+
+.subhead { margin-top: 1rem; margin-bottom: 0.25rem; }
