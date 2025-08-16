@@ -521,3 +521,65 @@ ul.contact li:before {
   .hero-inner { grid-template-columns: 1fr; text-align: center; }
   .hero-ctas { justify-content: center; }
 }
+
+
+/* --- Day-in-life timeline --- */
+.day-timeline {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(200px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.time-block {
+  background: #fdfaf3;                  /* matches your palette */
+  border: 1px solid #e3dcc7;
+  border-radius: 14px;
+  padding: 1.1rem 1rem 1.2rem;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.04);
+  position: relative;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.time-block:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.06);
+}
+
+.time-block .time {
+  display: inline-block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #3e4a33;
+  background: #efe8d2;
+  border: 1px solid #e0d7bd;
+  border-radius: 999px;
+  padding: 0.2rem 0.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.time-block h3 {
+  margin: 0.25rem 0 0.35rem;
+  font-size: 1.05rem;
+  color: #2f3a29;
+}
+
+.time-block p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #4a4d46;
+  line-height: 1.5;
+}
+
+.time-block.lunch {
+  background: #fff7ea;
+  border-style: dashed;
+  border-color: #f0d7a9;
+}
+
+@media screen and (max-width: 1200px) {
+  .day-timeline { grid-template-columns: repeat(3, minmax(220px, 1fr)); }
+}
+@media screen and (max-width: 760px) {
+  .day-timeline { grid-template-columns: 1fr; }
+}
