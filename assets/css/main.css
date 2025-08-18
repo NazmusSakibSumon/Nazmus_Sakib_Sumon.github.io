@@ -617,3 +617,100 @@ ul.contact li:before {
 .video-panel[hidden] { display: none !important; }
 
 .subhead { margin-top: 1rem; margin-bottom: 0.25rem; }
+
+
+/* Layout: put Day + Lifecycle side-by-side on wide screens */
+.project-two-up {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+@media (min-width: 1100px) {
+  /* If your Day section occupies a full wrapper above, this keeps Lifecycle
+     visually balanced; if you wrap both into one parent later, set columns: 1fr 1fr */
+  .project-two-up {
+    grid-template-columns: 1fr;
+  }
+}
+.project-col {
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+/* Wheel container */
+.project-wheel {
+  position: relative;
+  width: min(560px, 90vw);
+  aspect-ratio: 1 / 1;
+  margin: 1.25rem auto 0;
+  border-radius: 20px;
+  background: #f8f6ee;             /* light neutral to match site */
+  box-shadow: 0 1px 0 rgba(0,0,0,.03), 0 12px 22px rgba(0,0,0,.05);
+}
+
+/* Center disc */
+.wheel-center {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  width: 38%;
+  aspect-ratio: 1 / 1;
+  background: #fffdf6;
+  border: 2px dashed #e5dcc8;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: .5rem;
+}
+.wheel-center strong {
+  color: #3e4a33;
+  line-height: 1.2;
+}
+.wheel-center span {
+  display: block;
+  font-size: .8rem;
+  color: #7c7a6f;
+  margin-top: .25rem;
+}
+
+/* Steps (positioned around) */
+.wheel-step {
+  position: absolute;
+  width: 44%;
+  min-height: 72px;
+  background: #fff;
+  border: 1px solid #ece7d7;
+  border-radius: 14px;
+  padding: .75rem .85rem;
+  box-shadow: 0 10px 18px rgba(0,0,0,.04);
+}
+.wheel-step h4 {
+  margin: 0 0 .25rem;
+  font-size: 1rem;
+  color: #2f3b1f;
+}
+.wheel-step p {
+  font-size: .9rem;
+  color: #5d5b52;
+  margin: 0;
+}
+
+/* Radial placement */
+.wheel-step.intake   { top: 2%;  left: 50%; transform: translate(-50%, 0); }
+.wheel-step.triage   { top: 14%; left: 86%; transform: translate(-50%, -50%); }
+.wheel-step.data     { top: 50%; left: 98%; transform: translate(-100%, -50%); }
+.wheel-step.build    { top: 86%; left: 86%; transform: translate(-50%, -50%); }
+.wheel-step.deliver  { top: 98%; left: 50%; transform: translate(-50%, -100%); }
+.wheel-step.automate { top: 86%; left: 14%; transform: translate(-50%, -50%); }
+.wheel-step.govern   { top: 50%; left: 2%;  transform: translate(0, -50%); }
+.wheel-step.improve  { top: 14%; left: 14%; transform: translate(-50%, -50%); }
+
+/* Mobile fallback list */
+.wheel-list { display: none; margin: 1rem 0 0; padding-left: 1.25rem; }
+.wheel-list li { margin: .35rem 0; color: #514f45; }
+
+@media (max-width: 780px) {
+  .project-wheel { display: none; }
+  .wheel-list { display: block; }
+}
