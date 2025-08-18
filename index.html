@@ -146,119 +146,113 @@
 
 
 
-<!-- Video Demos: Tool-Specific -->
-<!-- ========================= -->
-<section id="video-demos" class="wrapper alt style1">
+<section id="videos" class="wrapper alt style1">
   <div class="inner">
-    <h2 class="major">Video Demos</h2>
-    <p class="section-lede">Short, focused demos showing how I work with Qlik, SQL Server, VisualCron, Python, and TeamDynamix.</p>
+    <div class="videos-header">
+      <h2 class="major">My Video Portfolio</h2>
 
-    <div class="video-grid">
-      <!-- Qlik Cloud -->
-      <a class="video-card" href="https://www.youtube.com/watch?v=uzXAl0Fwe7k" target="_blank" rel="noopener">
-        <div class="thumb" style="background-image:url('images/qlik.png');"></div>
-        <div class="video-meta">
-          <h3>Qlik Cloud: KPI Dashboard Walkthrough</h3>
-          <p>Building a KPI dashboard, data model basics, and sheet design tips.</p>
-        </div>
-      </a>
+      <div class="segmented" role="tablist" aria-label="Video categories">
+        <button class="seg-btn active" data-target="tools" role="tab" aria-selected="true">Tool Demos</button>
+        <button class="seg-btn" data-target="core" role="tab" aria-selected="false">Core Skills</button>
+      </div>
+    </div>
 
-      <!-- SQL Server -->
-      <a class="video-card" href="https://www.youtube.com/watch?v=uzXAl0Fwe7k" target="_blank" rel="noopener">
-        <div class="thumb" style="background-image:url('images/sql.png');"></div>
-        <div class="video-meta">
-          <h3>SQL Server: From Query to View</h3>
-          <p>Writing T-SQL, creating views, and feeding BI layers clean data.</p>
-        </div>
-      </a>
+    <!-- Panel A: tool demos -->
+    <div id="videos-tools" class="video-panel active" role="tabpanel">
+      <p class="section-lede">Short, focused demos showing how I work with Qlik, SQL Server, VisualCron, Python, and TeamDynamix.</p>
 
-      <!-- VisualCron -->
-      <a class="video-card" href="https://www.youtube.com/watch?v=uzXAl0Fwe7k" target="_blank" rel="noopener">
-        <div class="thumb" style="background-image:url('images/visualcron.png');"></div>
-        <div class="video-meta">
-          <h3>VisualCron: Scheduling Data Jobs</h3>
-          <p>Automating extracts, retries, notifications, and logging.</p>
-        </div>
-      </a>
+      <div class="video-grid">
+        <a class="video-card" href="https://www.youtube.com/watch?v=uzXAl0Fwe7k" target="_blank" rel="noopener">
+          <div class="thumb" style="background-image:url('images/qlik.png');"></div>
+          <div class="video-meta">
+            <h3>Qlik Cloud: KPI Dashboard Walkthrough</h3>
+            <p>Building a KPI dashboard, data model basics, and sheet design tips.</p>
+          </div>
+        </a>
 
-      <!-- Python -->
-      <a class="video-card" href="https://www.youtube.com/watch?v=uzXAl0Fwe7k" target="_blank" rel="noopener">
-        <div class="thumb" style="background-image:url('images/python.png');"></div>
-        <div class="video-meta">
-          <h3>Python: ETL with Pandas</h3>
-          <p>Reading files/APIs, transforming data, and exporting reliably.</p>
-        </div>
-      </a>
+        <a class="video-card" href="https://www.youtube.com/watch?v=uzXAl0Fwe7k" target="_blank" rel="noopener">
+          <div class="thumb" style="background-image:url('images/sql.png');"></div>
+          <div class="video-meta">
+            <h3>SQL Server: From Query to View</h3>
+            <p>Writing T-SQL, creating views, and feeding BI layers clean data.</p>
+          </div>
+        </a>
 
-      <!-- TeamDynamix -->
-      <a class="video-card" href="https://www.youtube.com/watch?v=uzXAl0Fwe7k" target="_blank" rel="noopener">
-        <div class="thumb" style="background-image:url('images/teamdynamix.png');"></div>
-        <div class="video-meta">
-          <h3>TeamDynamix: Ticket Insights</h3>
-          <p>Turning ticket data into actionable ops reporting.</p>
-        </div>
-      </a>
+        <a class="video-card" href="https://www.youtube.com/watch?v=uzXAl0Fwe7k" target="_blank" rel="noopener">
+          <div class="thumb" style="background-image:url('images/visualcron.png');"></div>
+          <div class="video-meta">
+            <h3>VisualCron: Scheduling Data Jobs</h3>
+            <p>Automating extracts, retries, notifications, and logging.</p>
+          </div>
+        </a>
+
+        <a class="video-card" href="https://www.youtube.com/watch?v=uzXAl0Fwe7k" target="_blank" rel="noopener">
+          <div class="thumb" style="background-image:url('images/python.png');"></div>
+          <div class="video-meta">
+            <h3>Python: ETL with Pandas</h3>
+            <p>Reading files/APIs, transforming data, and exporting reliably.</p>
+          </div>
+        </a>
+
+        <a class="video-card" href="https://www.youtube.com/watch?v=uzXAl0Fwe7k" target="_blank" rel="noopener">
+          <div class="thumb" style="background-image:url('images/teamdynamix.png');"></div>
+          <div class="video-meta">
+            <h3>TeamDynamix: Ticket Insights</h3>
+            <p>Turning ticket data into actionable ops reporting.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Panel B: core skills -->
+    <div id="videos-core" class="video-panel" role="tabpanel" hidden>
+      <p class="section-lede">Real-world tasks: troubleshooting, pipelines, dashboard design, and tool selection.</p>
+
+      <div class="video-grid">
+        <a class="video-card" href="https://www.youtube.com/watch?v=uzXAl0Fwe7k" target="_blank" rel="noopener">
+          <div class="thumb" style="background-image:url('images/core-troubleshoot-thumb.png');"></div>
+          <div class="video-meta">
+            <h3>Troubleshooting: From Symptom to Root Cause</h3>
+            <p>Logs, checks, and a structured approach to diagnose and fix issues fast.</p>
+          </div>
+        </a>
+
+        <a class="video-card" href="https://www.youtube.com/watch?v=uzXAl0Fwe7k" target="_blank" rel="noopener">
+          <div class="thumb" style="background-image:url('images/core-pipeline-thumb.png');"></div>
+          <div class="video-meta">
+            <h3>Pipeline: Source → Transform → Load → BI</h3>
+            <p>Designing a reliable ETL/ELT chain with SQL and Python, scheduled in VisualCron.</p>
+          </div>
+        </a>
+
+        <a class="video-card" href="https://www.youtube.com/watch?v=uzXAl0Fwe7k" target="_blank" rel="noopener">
+          <div class="thumb" style="background-image:url('images/core-dashboard-thumb.png');"></div>
+          <div class="video-meta">
+            <h3>Dashboard Design: From KPIs to Layout</h3>
+            <p>Prioritizing KPIs, visual choices, and interaction patterns in Qlik.</p>
+          </div>
+        </a>
+
+        <a class="video-card" href="https://www.youtube.com/watch?v=uzXAl0Fwe7k" target="_blank" rel="noopener">
+          <div class="thumb" style="background-image:url('images/core-toolchoice-thumb.png');"></div>
+          <div class="video-meta">
+            <h3>Choosing the Right Tool</h3>
+            <p>When to use SQL, Python, or Qlik — and how they complement each other.</p>
+          </div>
+        </a>
+
+        <a class="video-card" href="https://www.youtube.com/watch?v=uzXAl0Fwe7k" target="_blank" rel="noopener">
+          <div class="thumb" style="background-image:url('images/core-communication-thumb.png');"></div>
+          <div class="video-meta">
+            <h3>Stakeholder Communication</h3>
+            <p>Framing the business question, assumptions, and outcomes effectively.</p>
+          </div>
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
-
-<!-- ===================================== -->
-<!-- Core Data Analyst Skills: Problem-Solving -->
-<!-- ===================================== -->
-<section id="core-skills" class="wrapper style2">
-  <div class="inner">
-    <h2 class="major">Core Data Analyst Skills — Real-World Scenarios</h2>
-    <p class="section-lede">Walkthroughs of typical but important tasks: troubleshooting, pipelines, dashboard design, and tool selection.</p>
-
-    <div class="video-grid">
-      <!-- Troubleshooting -->
-      <a class="video-card" href="https://www.youtube.com/watch?v=uzXAl0Fwe7k" target="_blank" rel="noopener">
-        <div class="thumb" style="background-image:url('images/core-troubleshoot-thumb.png');"></div>
-        <div class="video-meta">
-          <h3>Troubleshooting: From Symptom to Root Cause</h3>
-          <p>Logs, checks, and a structured approach to diagnose and fix issues fast.</p>
-        </div>
-      </a>
-
-      <!-- Pipeline -->
-      <a class="video-card" href="https://www.youtube.com/watch?v=uzXAl0Fwe7k" target="_blank" rel="noopener">
-        <div class="thumb" style="background-image:url('images/core-pipeline-thumb.png');"></div>
-        <div class="video-meta">
-          <h3>Pipeline: Source → Transform → Load → BI</h3>
-          <p>Designing a reliable ETL/ELT chain with SQL and Python, scheduled in VisualCron.</p>
-        </div>
-      </a>
-
-      <!-- Dashboard Design -->
-      <a class="video-card" href="https://www.youtube.com/watch?v=uzXAl0Fwe7k" target="_blank" rel="noopener">
-        <div class="thumb" style="background-image:url('images/core-dashboard-thumb.png');"></div>
-        <div class="video-meta">
-          <h3>Dashboard Design: From KPIs to Layout</h3>
-          <p>Prioritizing KPIs, visual choices, and interaction patterns in Qlik.</p>
-        </div>
-      </a>
-
-      <!-- Tool Choice -->
-      <a class="video-card" href="https://www.youtube.com/watch?v=uzXAl0Fwe7k" target="_blank" rel="noopener">
-        <div class="thumb" style="background-image:url('images/core-toolchoice-thumb.png');"></div>
-        <div class="video-meta">
-          <h3>Choosing the Right Tool</h3>
-          <p>When to use SQL, Python, or Qlik — and how they complement each other.</p>
-        </div>
-      </a>
-
-      <!-- Stakeholder Comms -->
-      <a class="video-card" href="https://www.youtube.com/watch?v=uzXAl0Fwe7k" target="_blank" rel="noopener">
-        <div class="thumb" style="background-image:url('images/core-communication-thumb.png');"></div>
-        <div class="video-meta">
-          <h3>Stakeholder Communication</h3>
-          <p>Framing the business question, assumptions, and outcomes effectively.</p>
-        </div>
-      </a>
-    </div>
-  </div>
-</section>
 
 
 
