@@ -610,43 +610,9 @@ ul.contact li:before {
 
 
 
-.project-center {
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  background: #fdfdfc;
-  border: 2px solid #ccc;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 1.25rem;
-  z-index: 2;
-  text-align: center;
-}
 
-.project-step {
-  position: absolute;
-  width: 220px;
-  background: #fff;
-  padding: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  text-align: left;
-  font-size: 0.9rem;
-  z-index: 1;
-}
 
-/* Position each step in a circle */
-.step1 { top: 0%; left: 50%; transform: translate(-50%, -50%); }
-.step2 { top: 18%; left: 80%; transform: translate(-50%, -50%); }
-.step3 { top: 50%; left: 100%; transform: translate(-50%, -50%); }
-.step4 { top: 82%; left: 80%; transform: translate(-50%, -50%); }
-.step5 { top: 100%; left: 50%; transform: translate(-50%, -50%); }
-.step6 { top: 82%; left: 20%; transform: translate(-50%, -50%); }
-.step7 { top: 50%; left: 0%; transform: translate(-50%, -50%); }
-.step8 { top: 18%; left: 20%; transform: translate(-50%, -50%); }
+
 
 .project-col {
   max-width: 900px;
