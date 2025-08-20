@@ -523,59 +523,6 @@ ul.contact li:before {
 }
 
 
-/* --- Day-in-life timeline --- */
-.day-timeline {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(200px, 1fr));
-  gap: 1.25rem;
-  margin-top: 1.5rem;
-}
-
-.time-block {
-  background: #fdfaf3;                  /* matches your palette */
-  border: 1px solid #e3dcc7;
-  border-radius: 14px;
-  padding: 1.1rem 1rem 1.2rem;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.04);
-  position: relative;
-  transition: transform .15s ease, box-shadow .15s ease;
-}
-
-.time-block:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 26px rgba(0,0,0,0.06);
-}
-
-.time-block .time {
-  display: inline-block;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: #3e4a33;
-  background: #efe8d2;
-  border: 1px solid #e0d7bd;
-  border-radius: 999px;
-  padding: 0.2rem 0.6rem;
-  margin-bottom: 0.5rem;
-}
-
-.time-block h3 {
-  margin: 0.25rem 0 0.35rem;
-  font-size: 1.05rem;
-  color: #2f3a29;
-}
-
-.time-block p {
-  margin: 0;
-  font-size: 0.95rem;
-  color: #4a4d46;
-  line-height: 1.5;
-}
-
-.time-block.lunch {
-  background: #fff7ea;
-  border-style: dashed;
-  border-color: #f0d7a9;
-}
 
 @media screen and (max-width: 1200px) {
   .day-timeline { grid-template-columns: repeat(3, minmax(220px, 1fr)); }
@@ -619,19 +566,58 @@ ul.contact li:before {
 .subhead { margin-top: 1rem; margin-bottom: 0.25rem; }
 
 
-/* Layout: put Day + Lifecycle side-by-side on wide screens */
-.project-two-up {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
+.project-wheel {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  height: 800px;
+  margin: 3rem auto;
+  border-radius: 50%;
+  border: 2px dashed #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-@media (min-width: 1100px) {
-  /* If your Day section occupies a full wrapper above, this keeps Lifecycle
-     visually balanced; if you wrap both into one parent later, set columns: 1fr 1fr */
-  .project-two-up {
-    grid-template-columns: 1fr;
-  }
+
+.project-center {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: #fdfdfc;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.25rem;
+  z-index: 2;
+  text-align: center;
 }
+
+.project-step {
+  position: absolute;
+  width: 220px;
+  background: #fff;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  text-align: left;
+  font-size: 0.9rem;
+  z-index: 1;
+}
+
+/* Position each step in a circle */
+.step1 { top: 0%; left: 50%; transform: translate(-50%, -50%); }
+.step2 { top: 18%; left: 80%; transform: translate(-50%, -50%); }
+.step3 { top: 50%; left: 100%; transform: translate(-50%, -50%); }
+.step4 { top: 82%; left: 80%; transform: translate(-50%, -50%); }
+.step5 { top: 100%; left: 50%; transform: translate(-50%, -50%); }
+.step6 { top: 82%; left: 20%; transform: translate(-50%, -50%); }
+.step7 { top: 50%; left: 0%; transform: translate(-50%, -50%); }
+.step8 { top: 18%; left: 20%; transform: translate(-50%, -50%); }
+
 .project-col {
   max-width: 900px;
   margin-inline: auto;
