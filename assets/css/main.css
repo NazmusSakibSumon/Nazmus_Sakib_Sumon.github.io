@@ -685,3 +685,67 @@ ul.contact li:before {
 
 @media (max-width: 736px) { .hero { padding: 1.75rem 0 2.25rem; } }
 /* shrink hero on small screens */
+
+
+/* Project Lifecycle Arrow Flow */
+.arrow-flow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: stretch;
+  margin-top: 2rem;
+}
+
+.flow-step {
+  position: relative;
+  flex: 1 1 250px;
+  min-width: 220px;
+  max-width: 280px;
+  background: #fff;
+  border: 1px solid #e4decd;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,.05);
+}
+
+.flow-step h4 {
+  margin: 0 0 .5rem;
+  color: #2f3b1f;
+}
+
+.flow-step p {
+  font-size: 0.9rem;
+  color: #555;
+  margin: 0;
+}
+
+/* Add arrows between steps */
+.flow-step::after {
+  content: "➔";
+  position: absolute;
+  right: -1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  color: #a9b665;
+}
+
+.flow-step:last-child::after {
+  content: "";
+}
+
+/* Stack vertically on small screens */
+@media (max-width: 768px) {
+  .arrow-flow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .flow-step::after {
+    content: "↓";
+    right: 50%;
+    top: auto;
+    bottom: -1.2rem;
+    transform: translateX(50%);
+  }
+}
