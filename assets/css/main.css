@@ -182,11 +182,11 @@ ul.contact li:before {
 }
 
 .tech-card:hover {
-  transform: translateY(-5px);
+  transform: none;
 }
 
 .tech-card:hover .underline {
-  width: 100%;
+  width: 0;
 }
 
 /* === New sections: videos, live updates, books === */
